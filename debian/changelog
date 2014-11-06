@@ -1,3 +1,12 @@
+grub2 (2.02~beta2-16) unstable; urgency=medium
+
+  [ Ian Campbell ]
+  * Provide prebuilt grub-xen binaries for host use in a new grub-xen-host
+    package.
+  * Build/Install binaries into /boot/xen when installing grub-xen.
+
+ -- Ian Campbell <ijc@debian.org>  Thu, 06 Nov 2014 13:32:01 +0000
+
 grub2 (2.02~beta2-15) unstable; urgency=medium
 
   * Disable nvram installation again on chrp_ibm machines that are emulated

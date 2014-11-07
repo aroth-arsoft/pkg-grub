@@ -61,3 +61,4 @@ mips-abiflags.patch
 ieee1275-clear-reset.patch
 ppc64el-disable-vsx.patch
 grub-install-pvxen-paths.patch
+diskfilter.patch

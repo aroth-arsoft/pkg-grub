@@ -1,3 +1,9 @@
+grub2 (2.02~beta2-16.1~aroth~ppa1) utopic; urgency=medium
+
+  * integrate diskfilter patch for LP: #1274320
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Fri, 07 Nov 2014 06:48:00 +0100
+
 grub2 (2.02~beta2-16) unstable; urgency=medium
 
   [ Ian Campbell ]

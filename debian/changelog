@@ -1,3 +1,9 @@
+grub2 (2.02~beta2-16.1~aroth~ppa2) utopic; urgency=medium
+
+  * add missing files
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Sun, 09 Nov 2014 07:57:02 +0100
+
 grub2 (2.02~beta2-16.1~aroth~ppa1) utopic; urgency=medium
 
   * integrate diskfilter patch for LP: #1274320

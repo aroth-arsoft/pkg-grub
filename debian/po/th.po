@@ -1,15 +1,15 @@
 # Thai translation of grub.
-# Copyright (C) 2010-2012 Software in the Public Interest, Inc.
+# Copyright (C) 2010-2014 Software in the Public Interest, Inc.
 # This file is distributed under the same license as the grub package.
-# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2010-2012.
+# Theppitak Karoonboonyanan <thep@debian.org>, 2010-2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: grub\n"
 "Report-Msgid-Bugs-To: grub2@packages.debian.org\n"
-"POT-Creation-Date: 2011-05-27 13:33+0100\n"
-"PO-Revision-Date: 2012-01-20 17:12+0700\n"
-"Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
+"POT-Creation-Date: 2014-12-13 20:23+0000\n"
+"PO-Revision-Date: 2014-12-15 12:54+0700\n"
+"Last-Translator: Theppitak Karoonboonyanan <thep@debian.org>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
@@ -314,15 +314,40 @@ msgid ""
 "entry but not for the recovery mode."
 msgstr "พารามิเตอร์ต่อไปนี้จะใช้ในเมนูสำหรับบูตลินุกซ์แบบปกติ แต่จะไม่ใช้กับโหมดกู้ระบบ"
 
-#. Type: string
+#. Type: boolean
 #. Description
 #: ../templates.in:3001
+msgid "Force extra installation to the EFI removable media path?"
+msgstr "จะบังคับติดตั้งส่วนพิเศษเพิ่มเติมลงในพาธของสื่อถอดเสียบของ EFI หรือไม่?"
+
+#. Type: boolean
+#. Description
+#: ../templates.in:3001
+msgid ""
+"Some EFI-based systems are buggy and do not handle new bootloaders "
+"correctly. If you force an extra installation of GRUB to the EFI removable "
+"media path, this should ensure that this system will boot Debian correctly "
+"despite such a problem. However, it may remove the ability to boot any other "
+"operating systems that also depend on this path. If so, you will need to "
+"make sure that GRUB is configured successfully to be able to boot any other "
+"OS installations correctly."
+msgstr ""
+"ระบบที่อิง EFI บางระบบมีข้อบกพร่อง และไม่ได้จัดการบูตโหลดเดอร์ตัวใหม่ๆ อย่างถูกต้อง "
+"ถ้าคุณบังคับติดตั้งส่วนพิเศษเพิ่มเติมของ GRUB ลงในพาธของสื่อถอดเสียบของ EFI "
+"ก็จะช่วยให้แน่ใจได้ว่าระบบนี้จะบูตเดเบียนได้อย่างถูกต้องแม้จะมีปัญหาดังกล่าว อย่างไรก็ตาม "
+"การติดตั้งดังกล่าวอาจทำให้ไม่สามารถบูตระบบปฏิบัติการอื่นที่อิงอาศัยพาธนี้อยู่ด้วยได้ ซึ่งหากเป็นเช่นนั้น "
+"คุณจะต้องตรวจสอบให้แน่ใจว่าได้ตั้งค่า GRUB "
+"ได้สำเร็จเพื่อให้สามารถบูตระบบปฏิบัติการอื่นได้อย่างถูกต้องด้วย"
+
+#. Type: string
+#. Description
+#: ../templates.in:4001
 msgid "kFreeBSD command line:"
 msgstr "พารามิเตอร์สำหรับบูต kFreeBSD:"
 
 #. Type: string
 #. Description
-#: ../templates.in:3001
+#: ../templates.in:4001
 msgid ""
 "The following kFreeBSD command line was extracted from /etc/default/grub or "
 "the `kopt' parameter in GRUB Legacy's menu.lst. Please verify that it is "
@@ -334,13 +359,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates.in:4001
+#: ../templates.in:5001
 msgid "kFreeBSD default command line:"
 msgstr "พารามิเตอร์สำหรับบูต kFreeBSD แบบปกติ:"
 
 #. Type: string
 #. Description
-#: ../templates.in:4001
+#: ../templates.in:5001
 msgid ""
 "The following string will be used as kFreeBSD parameters for the default "
 "menu entry but not for the recovery mode."
@@ -348,13 +373,13 @@ msgstr "พารามิเตอร์ต่อไปนี้จะใช้
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid "/boot/grub/device.map has been regenerated"
 msgstr "สร้าง /boot/grub/device.map ใหม่เรียบร้อยแล้ว"
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid ""
 "The file /boot/grub/device.map has been rewritten to use stable device "
 "names. In most cases, this should significantly reduce the need to change it "
@@ -366,7 +391,7 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid ""
 "However, since more than one disk is present in the system, it is possible "
 "that the system is depending on the old device map. Please check whether "
@@ -379,7 +404,7 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid ""
 "If you do not understand this message, or if there are no custom boot menu "
 "entries, you can ignore this message."

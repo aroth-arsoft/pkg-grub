@@ -2,21 +2,22 @@
 # Copyright (C) 2010 Free Software Foundation
 # This file is distributed under the same license as the GRUB package.
 #
-# Sveinn í Felli <sveinki@nett.is>, 2010, 2011, 2012.
+# Sveinn í Felli <sveinki@nett.is>, 2010, 2011, 2012, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: grub_debian_po_is\n"
 "Report-Msgid-Bugs-To: grub2@packages.debian.org\n"
-"POT-Creation-Date: 2011-05-27 13:33+0100\n"
-"PO-Revision-Date: 2012-01-20 09:44+0000\n"
-"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"POT-Creation-Date: 2014-12-13 20:23+0000\n"
+"PO-Revision-Date: 2014-12-13 23:20+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
-"Language: \n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 ">\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: boolean
 #. Description
@@ -328,18 +329,44 @@ msgid ""
 "The following string will be used as Linux parameters for the default menu "
 "entry but not for the recovery mode."
 msgstr ""
-"Eftirfarandi strengur verður notaður sem Linux viðfang í sjálfgenu "
+"Eftirfarandi strengur verður notaður sem Linux viðfang í sjálfgefnu "
 "valmyndarfærslunni en ekki í viðgerðarham."
+
+#. Type: boolean
+#. Description
+#: ../templates.in:3001
+msgid "Force extra installation to the EFI removable media path?"
+msgstr "Þvinga aukauppsetningu inn á EFI-slóðina fyrir útskiptanlega miðla?"
+
+#. Type: boolean
+#. Description
+#: ../templates.in:3001
+msgid ""
+"Some EFI-based systems are buggy and do not handle new bootloaders "
+"correctly. If you force an extra installation of GRUB to the EFI removable "
+"media path, this should ensure that this system will boot Debian correctly "
+"despite such a problem. However, it may remove the ability to boot any other "
+"operating systems that also depend on this path. If so, you will need to "
+"make sure that GRUB is configured successfully to be able to boot any other "
+"OS installations correctly."
+msgstr ""
+"Sum EFI-kerfi eru ekki villulaus og meðhöndla nýja ræsistjóra (bootloaders) "
+"ekki rétt. Ef þú þvingar aukauppsetningu af GRUB inn á EFI-slóðina fyrir "
+"útskiptanlega miðla, ætti það að tryggja að Debian ræsist rétt þrátt fyrir "
+"slíka galla. Hinsvegar, þetta gæti líka skemmt hæfnina til að ræsa önnur "
+"stýrikerfi sem einnig eru háð notkun á þessari slóð. Ef sú er raunin, þá "
+"verður þú að ganga úr skugga um að GRUB sé sett upp á fullnægjandi máta til "
+"þess að geta ræst rétt öll önnur stýrikerfi."
 
 #. Type: string
 #. Description
-#: ../templates.in:3001
+#: ../templates.in:4001
 msgid "kFreeBSD command line:"
 msgstr "kFreeBSD skipanalína:"
 
 #. Type: string
 #. Description
-#: ../templates.in:3001
+#: ../templates.in:4001
 msgid ""
 "The following kFreeBSD command line was extracted from /etc/default/grub or "
 "the `kopt' parameter in GRUB Legacy's menu.lst. Please verify that it is "
@@ -351,29 +378,29 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates.in:4001
+#: ../templates.in:5001
 msgid "kFreeBSD default command line:"
 msgstr "Sjálfgefin kFreeBSD skipanalína:"
 
 #. Type: string
 #. Description
-#: ../templates.in:4001
+#: ../templates.in:5001
 msgid ""
 "The following string will be used as kFreeBSD parameters for the default "
 "menu entry but not for the recovery mode."
 msgstr ""
-"Eftirfarandi strengur verður notaður sem kFreeBSD viðfang í sjálfgenu "
+"Eftirfarandi strengur verður notaður sem kFreeBSD viðfang í sjálfgefnu "
 "valmyndarfærslunni en ekki í viðgerðarham."
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid "/boot/grub/device.map has been regenerated"
 msgstr "/boot/grub/device.map var endurskrifað"
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid ""
 "The file /boot/grub/device.map has been rewritten to use stable device "
 "names. In most cases, this should significantly reduce the need to change it "
@@ -386,7 +413,7 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid ""
 "However, since more than one disk is present in the system, it is possible "
 "that the system is depending on the old device map. Please check whether "
@@ -400,7 +427,7 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid ""
 "If you do not understand this message, or if there are no custom boot menu "
 "entries, you can ignore this message."

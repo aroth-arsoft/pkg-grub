@@ -1,3 +1,111 @@
+grub2 (2.02~beta2-21.1~aroth~ppa1) vivid; urgency=medium
+
+  * patch grub for diskfilter issue
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Mon, 09 Mar 2015 07:00:31 +0100
+
+grub2 (2.02~beta2-21) unstable; urgency=medium
+
+  [ Mathieu Trudel-Lapierre ]
+  * Fix overlap check in check_blocklists for load_env (backported patch
+    from upstream commit 1f6af2a9; LP: #1311247).
+
+  [ Steve McIntyre ]
+  * Add support for running a 64-bit Linux kernel on a 32-bit EFI (closes:
+    #775202).
+
+  [ Colin Watson ]
+  * Use mtmsr rather than mtmsrd in ppc64el-disable-vsx.patch, since the
+    "VSX Available" bit is in the lower half of the MSR anyway, and mtmsrd
+    faults on 32-bit systems (closes: #776400).
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 27 Jan 2015 20:37:04 +0000
+
+grub2 (2.02~beta2-20) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * Generate alternative init entries in advanced menu (closes: #757298,
+    #773173).
+  * When configuring grub-pc, copy unicode.pf2 to /boot/grub/ even if
+    /boot/grub/grub.cfg does not exist yet; this matches the behaviour of
+    grub-efi-* (thanks, Luca Capello; closes: #617196).
+
+  [ Debconf translations ]
+  * [fi] Finnish (Timo Jyrinki; closes: #774060).
+  * [mr] Marathi (sampada nakhare; closes: #773901).
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 03 Jan 2015 12:39:52 +0000
+
+grub2 (2.02~beta2-19) unstable; urgency=medium
+
+  [ Steve McIntyre ]
+  * Handle case insensitivity of VFAT filesystem on /boot/EFI when installing
+    extra cpoy of grub-efi to the removable media path
+    /boot/efi/EFI/BOOT/BOOT$ARCH.EFI (Closes: #773092)
+  * Make the force_efi_extra_removable debconf prompt only show up when
+    configuring grub-*efi*. Closes: #773004
+
+  [ Ian Campbell ]
+  * Improvements to English wording of new debconf template from Justin B Rye.
+  * Add debian/README.source.
+
+  [ Debconf translations ]
+  * [eu] Basque (Iñaki Larrañaga Murgoitio, Closes: #772946)
+  * [be] Belarusian (Viktar Siarheichyk, Closes: #773054)
+  * [pt_BR] Brazilian Portuguese (Adriano Rafael Gomes, Closes: #773682)
+  * [bg] Bulgarian (Damyan Ivanov, Closes: #772878)
+  * [cs] Czech (Miroslav Kure, Closes: #772924)
+  * [nl] Dutch (Frans Spiesschaert, Closes: 773637)
+  * [eo] Esperanto (Felipe Castro, Closes: #773096)
+  * [fi] Finnish (Timo Jyrinki, Closes: #772921)
+  * [fr] French (Christian PERRIER, Closes: #772771)
+  * [de] German (Martin Eberhard Schauer, Closes: #773664)
+  * [el] Greek (Panagiotis Georgakopoulos, Closes: #773068)
+  * [he] Hebrew (Omer Zak, Closes: #773377)
+  * [is] Icelandic (Sveinn í Felli, Closes: #772922)
+  * [it] Italian (Luca Monducci, Closes: #773553)
+  * [kk] Kazakh (Baurzhan Muftakhidinov, Closes: #772916)
+  * [lt] Lithuanian (Rimas Kudelis, Closes: #773060)
+  * [pl] Polish (Łukasz Dulny, Closes: #772930)
+  * [ro] Romanian (Andrei POPESCU, Closes: #773349)
+  * [ru] Russian (Yuri Kozlov, Closes: #773211)
+  * [sl] Slovenian (Vanja Cvelbar, Closes: #773508)
+  * [es] Spanish (Manuel "Venturi" Porras Peralta, Closes: #773222)
+  * [sv] Swedish (Martin Bagge & Anders Jonsson, Closes: 773208)
+  * [th] Thai (Theppitak Karoonboonyanan, Closes: #773160)
+  * [zh_TW] Traditional Chinese (Vincent W. Chen, Closes: #773418)
+  * [tr] Turkish (Mert Dirik, Closes: #773666)
+
+ -- Ian Campbell <ijc@debian.org>  Mon, 22 Dec 2014 11:55:33 +0000
+
+grub2 (2.02~beta2-18) unstable; urgency=medium
+
+  [ Steve McIntyre ]
+  * Add support for forcing an extra copy of grub-efi to the removable
+    media path /boot/efi/EFI/BOOT/BOOT$ARCH.EFI (#767037)
+
+  [ Ian Campbell ]
+  * Add myself to Uploaders.
+
+ -- Ian Campbell <ijc@debian.org>  Mon, 08 Dec 2014 08:38:38 +0000
+
+grub2 (2.02~beta2-17) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * Fix up some pointer-to-integer casts in linuxefi so that it can build on
+    i386-efi.
+  * Backport from upstream:
+    - Fix typo (gettext_print instead of gettext_printf) (LP: #1390766).
+
+  [ Ian Campbell ]
+  * Correct syntax error in grub-xen-host bootstrap configuration file.
+  * Log failure when grub-install fails in postinst, rather than failing the
+    entire postinst. (Closes: #770412)
+  * Arrange to insmod xzio and lzopio when booting a kernel as a Xen guest.
+    (Closes: #755256)
+
+ -- Ian Campbell <ijc@debian.org>  Sun, 30 Nov 2014 17:15:21 +0000
+
 grub2 (2.02~beta2-16.1~aroth~ppa2) utopic; urgency=medium
 
   * add missing files

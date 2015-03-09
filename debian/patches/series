@@ -21,7 +21,6 @@ blacklist_1440x900x32.patch
 uefi_firmware_setup.patch
 mkconfig_ubuntu_distributor.patch
 linuxefi.patch
-linuxefi_amd64_only.patch
 linuxefi_debug.patch
 linuxefi_require_shim.patch
 linuxefi_non_sb_fallback.patch
@@ -61,4 +60,9 @@ mips-abiflags.patch
 ieee1275-clear-reset.patch
 ppc64el-disable-vsx.patch
 grub-install-pvxen-paths.patch
-diskfilter.patch
+gettext-print-typo.patch
+insmod-xzio-and-lzopio-on-xen.patch
+grub-install-extra-removable.patch
+mkconfig_other_inits.patch
+check_blocklists_overlap_fix.patch
+mixed_size_efi.patch

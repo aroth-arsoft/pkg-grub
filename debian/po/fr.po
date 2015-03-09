@@ -3,20 +3,20 @@
 # Copyright (C) 2008-2010 Debian French l10n <debian-l10n-french@lists.debian.org>
 # This file is distributed under the same license as the grub2 package.
 #
-# Christian Perrier <bubulle@debian.org>, 2007, 2008, 2009, 2010, 2011.
+# Christian Perrier <bubulle@debian.org>, 2007, 2008, 2009, 2010, 2011, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: grub2@packages.debian.org\n"
-"POT-Creation-Date: 2011-05-27 13:33+0100\n"
-"PO-Revision-Date: 2011-05-28 07:47+0200\n"
+"POT-Creation-Date: 2014-12-13 20:23+0000\n"
+"PO-Revision-Date: 2014-12-14 08:09+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Type: boolean
@@ -346,15 +346,43 @@ msgstr ""
 "Les paramètres indiqués seront utilisés pour le noyau Linux de l'entrée de "
 "menu par défaut mais pas pour le mode de secours."
 
-#. Type: string
+#. Type: boolean
 #. Description
 #: ../templates.in:3001
+msgid "Force extra installation to the EFI removable media path?"
+msgstr ""
+"Faut-il forcer une installation supplémentaire sur le chemin des supports "
+"amovibles EFI ?"
+
+#. Type: boolean
+#. Description
+#: ../templates.in:3001
+msgid ""
+"Some EFI-based systems are buggy and do not handle new bootloaders "
+"correctly. If you force an extra installation of GRUB to the EFI removable "
+"media path, this should ensure that this system will boot Debian correctly "
+"despite such a problem. However, it may remove the ability to boot any other "
+"operating systems that also depend on this path. If so, you will need to "
+"make sure that GRUB is configured successfully to be able to boot any other "
+"OS installations correctly."
+msgstr ""
+"Certains systèmes EFI ne gèrent pas correctement les nouveaux chargeurs "
+"d'amorçage. Si vous forcez l'installation de GRUB sur le chemin des supports "
+"amovibles EFI, cela garantira que ce système pourra malgré tout démarrer "
+"Debian. Par contre, cela interdira le démarrage de tout autre système "
+"d'exploitation qui dépendrait aussi de ce chemin. Si c'est le cas, vous "
+"devez vous assurer que GRUB lui-même est configuré pour démarrer les autres "
+"systèmes d'exploitation."
+
+#. Type: string
+#. Description
+#: ../templates.in:4001
 msgid "kFreeBSD command line:"
 msgstr "Ligne de commande de kFreeBSD :"
 
 #. Type: string
 #. Description
-#: ../templates.in:3001
+#: ../templates.in:4001
 msgid ""
 "The following kFreeBSD command line was extracted from /etc/default/grub or "
 "the `kopt' parameter in GRUB Legacy's menu.lst. Please verify that it is "
@@ -367,13 +395,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates.in:4001
+#: ../templates.in:5001
 msgid "kFreeBSD default command line:"
 msgstr "Ligne de commande par défaut de kFreeBSD :"
 
 #. Type: string
 #. Description
-#: ../templates.in:4001
+#: ../templates.in:5001
 msgid ""
 "The following string will be used as kFreeBSD parameters for the default "
 "menu entry but not for the recovery mode."
@@ -383,13 +411,13 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid "/boot/grub/device.map has been regenerated"
 msgstr "Recréation de /boot/grub/device.map"
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid ""
 "The file /boot/grub/device.map has been rewritten to use stable device "
 "names. In most cases, this should significantly reduce the need to change it "
@@ -402,7 +430,7 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid ""
 "However, since more than one disk is present in the system, it is possible "
 "that the system is depending on the old device map. Please check whether "
@@ -417,7 +445,7 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates.in:5001
+#: ../templates.in:6001
 msgid ""
 "If you do not understand this message, or if there are no custom boot menu "
 "entries, you can ignore this message."

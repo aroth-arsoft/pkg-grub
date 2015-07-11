@@ -1,3 +1,94 @@
+grub2 (2.02~beta2-26ubuntu3.1~aroth~-ppa1) vivid; urgency=medium
+
+  * backport latest changes to vivid
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Sat, 11 Jul 2015 08:53:41 +0200
+
+grub2 (2.02~beta2-26ubuntu3) wily; urgency=medium
+
+  * debian/patches/uefi_firmware_setup.patch: take into account that the UEFI
+    variable OsIndicationsSupported is a bit field, and as such should be
+    compared as hex values in 30_uefi-firmware.in. (LP: #1456911)
+  * Update quick boot logic to handle abstractions for which there is no
+    write support. (LP: #1274320)
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Mon, 06 Jul 2015 16:32:11 -0400
+
+grub2 (2.02~beta2-26ubuntu2) wily; urgency=medium
+
+  * debian/build-efi-images: fix my typos from last upload: properly escape
+    the variables meant for grub.cfg rather than for expansion by the build
+    script.
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Thu, 25 Jun 2015 15:37:53 -0400
+
+grub2 (2.02~beta2-26ubuntu1) wily; urgency=medium
+
+  * debian/build-efi-images: look for grub.cfg in $cmdpath too in gcdx64.efi,
+    to simplify embedded scenarios: putting a grub.cfg snippet that loads the
+    right "real" grub.cfg can be useful. (LP: #1468111)
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Tue, 23 Jun 2015 17:27:18 -0400
+
+grub2 (2.02~beta2-26) unstable; urgency=medium
+
+  [ William Grant ]
+  * Fix linuxefi module to be included on x86_64-efi rather than amd64-efi.
+    amd64-efi isn't a thing. (LP: #1464959)
+
+  [ Steven Chamberlain ]
+  * Recognise Xen xbd and KVM virtio disks on kFreeBSD (closes: #786621).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 14 Jun 2015 10:02:19 +0100
+
+grub2 (2.02~beta2-25) unstable; urgency=medium
+
+  * Build-depend on dosfstools and mtools on arm64 as well as amd64.
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 12 Jun 2015 12:29:19 +0100
+
+grub2 (2.02~beta2-24) unstable; urgency=medium
+
+  [ Mathieu Trudel-Lapierre ]
+  * Fix handling of --disk-module option (cherry-pick from fa335308).
+    (Closes: #746596, LP: #1309735)
+  * Fix double-free of LV names for mdraid (cherry-pick from fc535b32).
+    (LP: #1330963)
+
+  [ dann frazier ]
+  * Build image tarball on arm64
+  * Only include linuxefi module in images for amd64. This module doesn't
+    exist on other platforms like arm64, where GRUB chainloads to the kernel
+    EFI stub.
+
+  [ Paulo Flabiano Smorigo ]
+  * powerpc: Add a flag to avoid unnecessary optimizations (like vsx)
+    (LP: #1459706).
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jun 2015 17:08:09 +0100
+
+grub2 (2.02~beta2-23) unstable; urgency=medium
+
+  [ Debconf translations ]
+  * [da] Danish (Joe Dalton; closes: #781333).
+
+  [ Felix Zielcke ]
+  * Run the tests with LC_MESSAGES=C.UTF-8. Some tests fail with non
+    english locale. (Closes: #782580)
+
+  [ Mathieu Trudel-Lapierre ]
+  * Backport from upstream:
+    - arp, icmp: Fix handling in case of oversized or invalid packets.
+      (LP: #1428005)
+
+  [ Robie Basak ]
+  * Change the default GRUB_RECORDFAIL_TIMEOUT to 30, so interactive users
+    still get the opporunity to intervene after a real boot failure, but
+    headless users will not end up stuck after boot failures that were
+    really power failures (closes: #782552, LP: #1443735).
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 14 May 2015 16:18:33 +0100
+
 grub2 (2.02~beta2-22ubuntu1.2~aroth~ppa1) vivid; urgency=medium
 
   * re-add diskfilter.patch

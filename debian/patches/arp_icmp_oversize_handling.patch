@@ -1,4 +1,4 @@
-From 943b92b095cedee582fef84a8574c42accb302ea Mon Sep 17 00:00:00 2001
+From 200dff350b040efe9780262a6ca57ec2432ce67a Mon Sep 17 00:00:00 2001
 From: Vladimir Serbinenko <phcoder@gmail.com>
 Date: Fri, 20 Mar 2015 21:14:23 +0100
 Subject: arp, icmp: Fix handling in case of oversized or invalid packets.
@@ -6,9 +6,6 @@ Subject: arp, icmp: Fix handling in case of oversized or invalid packets.
 This restrict ARP handling to MAC and IP addresses but in practice we need
 only this case anyway and other cases are very rar if exist at all. It makes
 code much simpler and less error-prone.
-
-Conflicts:
-	grub-core/net/arp.c
 
 Origin: upstream, http://git.savannah.gnu.org/cgit/grub.git/commit/?id=63034d32612dd34f577605dfa8b417ee9144d8cb
 Last-Update: 2015-04-06

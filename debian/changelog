@@ -1,3 +1,9 @@
+grub2 (2.02~beta2-26ubuntu3.1~aroth~ppa2) vivid; urgency=medium
+
+  * fix wrong permissions
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Sat, 11 Jul 2015 09:46:30 +0200
+
 grub2 (2.02~beta2-26ubuntu3.1~aroth~ppa1) vivid; urgency=medium
 
   * backport latest changes to vivid
